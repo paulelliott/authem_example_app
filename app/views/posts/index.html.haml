@@ -1,0 +1,9 @@
+%h1 Posts List
+%table
+  %thead
+    %th Title
+    %th Body
+  - posts.each do |post|
+    %tr
+      %td= post.title
+      %td= post.body

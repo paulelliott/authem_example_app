@@ -1,0 +1,19 @@
+!!! 5
+%html(lang='en-US')
+  %head
+  %title AuthemExampleApp
+  %meta(charset='UTF-8')
+  = stylesheet_link_tag "application"
+  = javascript_include_tag "application"
+  = csrf_meta_tags
+  - if flash.any?
+    .flash
+      - flash.keys.each do |type|
+        %p{class: type}= flash[type]
+  - if current_user
+    Welcome, #{current_user.email}
+    = link_to "Sign Out", sign_out_path
+  - else
+    = link_to "Sign In", sign_in_path
+
+= yield
