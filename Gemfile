@@ -15,12 +15,15 @@ group :assets do
 end
 
 group :development, :test do
+  gem 'fabrication'
+  gem 'ruby-debug19', :require => 'ruby-debug'
+end
+
+group :test do
   gem 'capybara', '~>1.1.2'
   gem 'cucumber-rails', '~>1.2.1'
   gem 'database_cleaner'
-  gem 'fabrication'
   gem 'launchy'
   gem 'rspec-rails'
-  gem 'ruby-debug19', :require => 'ruby-debug'
   gem 'shoulda-matchers'
 end

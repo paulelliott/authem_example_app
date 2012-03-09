@@ -11,5 +11,5 @@ Given /^I am signed in as "([^"]*)"$/ do |email|
 end
 
 When /^I visit the new post page$/ do
-    visit new_post_path
+  visit new_post_path
 end
