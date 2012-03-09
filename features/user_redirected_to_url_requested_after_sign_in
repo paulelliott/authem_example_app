@@ -1,0 +1,6 @@
+Feature: User redirected to url requested after sign in
+
+  Scenario:
+    When I visit the new post page
+    And I am signed in as "joe@example.com"
+    Then I should be on the new post page

@@ -9,3 +9,7 @@ Given /^I am signed in as "([^"]*)"$/ do |email|
   fill_in 'Password', with: '111'
   click_button 'Sign in'
 end
+
+When /^I visit the new post page$/ do
+    visit new_post_path
+end
