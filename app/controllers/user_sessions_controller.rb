@@ -10,6 +10,11 @@ class UserSessionsController < ApplicationController
     end
   end
 
+  def update
+    establish_presence(User.find_by_email(params[:logged_in_user]))
+    redirect_to :root
+  end
+
   def destroy
     sign_out
     redirect_to :root

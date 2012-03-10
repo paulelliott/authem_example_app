@@ -4,6 +4,7 @@ AuthemExampleApp::Application.routes.draw do
 
   match 'sign_in', to: 'user_sessions#new'
   match 'sign_out', to: 'user_sessions#destroy'
+  match 'change_user', to: 'user_sessions#update'
 
   root to: "posts#index"
 end

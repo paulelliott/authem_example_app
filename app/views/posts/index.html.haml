@@ -9,3 +9,9 @@
       %td= post.title
       %td= post.body
       %td= post.user.try :email
+
+%p
+  = form_tag change_user_path, method: :put do
+    %label(for="logged_in_user") Change current_user to:
+    = text_field_tag :logged_in_user
+    = submit_tag "Submit"
