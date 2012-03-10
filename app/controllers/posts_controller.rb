@@ -5,6 +5,7 @@ class PostsController < ApplicationController
   expose(:posts) { Post.all }
 
   def create
+    post.user = current_user
     if post.save
       redirect_to posts_path, flash: { notice: 'Post created' }
     else

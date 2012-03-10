@@ -3,7 +3,9 @@
   %thead
     %th Title
     %th Body
+    %th Author
   - posts.each do |post|
     %tr
       %td= post.title
       %td= post.body
+      %td= post.user.try :email
